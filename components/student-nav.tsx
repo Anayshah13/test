@@ -46,7 +46,6 @@ export function StudentNav() {
           "Mock Interviews": MessageSquare,
           "Job Fairs": Calendar,
           Resources: BookOpen,
-          "Career Guidance": BookOpen,
         }
         const items = data
           .filter((item) => item.path.startsWith("/student/"))
@@ -57,11 +56,10 @@ export function StudentNav() {
         if (isMounted)
           setNavItems([
             { href: "/student/dashboard", label: "Dashboard", icon: LayoutDashboard },
-            { href: "/student/jobs", label: "Jobs", icon: Briefcase },
+            { href: "/student/job-fairs", label: "Job Fairs", icon: Calendar },
             { href: "/student/applications", label: "Applications", icon: FileText },
             { href: "/student/tests", label: "Skill Tests", icon: Brain },
             { href: "/student/interviews", label: "Mock Interviews", icon: MessageSquare },
-            { href: "/student/job-fairs", label: "Job Fairs", icon: Calendar },
             { href: "/student/resources", label: "Resources", icon: BookOpen },
           ])
       }

@@ -23,7 +23,17 @@ export const storage = {
   getApplications: (): Application[] => {
     if (typeof window === "undefined") return []
     const apps = localStorage.getItem("applications")
-    return apps ? JSON.parse(apps) : []
+    if (!apps) return []
+    try {
+      const parsed: Application[] = JSON.parse(apps)
+      // Normalize date fields that were stringified
+      return parsed.map((a) => ({
+        ...a,
+        appliedAt: a.appliedAt ? new Date(a.appliedAt as unknown as string) : new Date(),
+      }))
+    } catch {
+      return []
+    }
   },
 
   addApplication: (application: Application) => {

@@ -12,6 +12,7 @@ export default function MockInterviewsPage() {
   const [selectedTopic, setSelectedTopic] = useState("")
   const [selectedDifficulty, setSelectedDifficulty] = useState("")
   const [started, setStarted] = useState(false)
+  const [activeTab, setActiveTab] = useState<"qa" | "oa">("qa")
 
   const topics = [
     { id: "technical", name: "Technical/Coding", description: "Data structures, algorithms, system design" },
@@ -46,6 +47,12 @@ export default function MockInterviewsPage() {
         <p className="text-muted-foreground text-lg">Practice with AI-powered interviews and get detailed feedback</p>
       </div>
 
+      <div className="mb-6 flex items-center gap-2">
+        <Button variant={activeTab === "qa" ? "secondary" : "ghost"} size="sm" onClick={() => setActiveTab("qa")}>Q/A</Button>
+        <Button variant={activeTab === "oa" ? "secondary" : "ghost"} size="sm" onClick={() => setActiveTab("oa")}>OA</Button>
+      </div>
+
+      {activeTab === "qa" ? (
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
           {!started ? (
@@ -248,6 +255,17 @@ export default function MockInterviewsPage() {
           </Card>
         </div>
       </div>
+      ) : (
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl">CODING ROUND</CardTitle>
+            <CardDescription>Practice timed coding problems in your preferred language.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-muted-foreground">Coming soon.</p>
+          </CardContent>
+        </Card>
+      )}
     </div>
   )
 }
