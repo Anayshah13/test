@@ -1,0 +1,126 @@
+import type { Job, SkillTest, JobFair, Resource } from "./types"
+
+export const mockJobs: Job[] = [
+  {
+    id: "1",
+    employerId: "emp1",
+    companyName: "TechCorp",
+    title: "Software Engineer",
+    description: "Join our team to build cutting-edge web applications using React and Node.js.",
+    requirements: ["React", "TypeScript", "Node.js", "2+ years experience"],
+    location: "San Francisco, CA",
+    type: "full-time",
+    salary: "$120k - $150k",
+    postedAt: new Date("2025-09-15"),
+    deadline: new Date("2025-10-15"),
+    status: "active",
+  },
+  {
+    id: "2",
+    employerId: "emp2",
+    companyName: "DataSystems Inc",
+    title: "Data Analyst Intern",
+    description: "Work with our data team to analyze user behavior and create insights.",
+    requirements: ["Python", "SQL", "Data Visualization", "Statistics"],
+    location: "Remote",
+    type: "internship",
+    salary: "$25/hour",
+    postedAt: new Date("2025-09-20"),
+    deadline: new Date("2025-10-20"),
+    status: "active",
+  },
+  {
+    id: "3",
+    employerId: "emp3",
+    companyName: "CloudNine",
+    title: "DevOps Engineer",
+    description: "Help us scale our infrastructure and improve deployment processes.",
+    requirements: ["AWS", "Docker", "Kubernetes", "CI/CD", "3+ years experience"],
+    location: "New York, NY",
+    type: "full-time",
+    salary: "$130k - $160k",
+    postedAt: new Date("2025-09-25"),
+    deadline: new Date("2025-10-25"),
+    status: "active",
+  },
+]
+
+export const mockSkillTests: SkillTest[] = [
+  {
+    id: "1",
+    title: "JavaScript Fundamentals",
+    category: "Programming",
+    questions: 20,
+    duration: 30,
+    difficulty: "beginner",
+  },
+  {
+    id: "2",
+    title: "React Advanced Patterns",
+    category: "Frontend",
+    questions: 15,
+    duration: 45,
+    difficulty: "advanced",
+  },
+  {
+    id: "3",
+    title: "Data Structures & Algorithms",
+    category: "Computer Science",
+    questions: 25,
+    duration: 60,
+    difficulty: "intermediate",
+  },
+]
+
+export const mockJobFairs: JobFair[] = [
+  {
+    id: "1",
+    title: "Tech Career Fair 2025",
+    description: "Meet top tech companies and explore career opportunities.",
+    date: new Date("2025-11-15"),
+    location: "Convention Center, Downtown",
+    companies: ["Google", "Microsoft", "Amazon", "Meta", "Apple"],
+    registeredStudents: [],
+    status: "upcoming",
+  },
+  {
+    id: "2",
+    title: "Startup Hiring Expo",
+    description: "Connect with innovative startups looking for fresh talent.",
+    date: new Date("2025-12-01"),
+    location: "Innovation Hub",
+    companies: ["Stripe", "Vercel", "Supabase", "Linear", "Notion"],
+    registeredStudents: [],
+    status: "upcoming",
+  },
+]
+
+export const mockResources: Resource[] = [
+  {
+    id: "1",
+    title: "Complete Guide to Technical Interviews",
+    category: "Interview Prep",
+    type: "article",
+    url: "#",
+    description: "Master the art of technical interviews with this comprehensive guide.",
+    tags: ["interviews", "coding", "preparation"],
+  },
+  {
+    id: "2",
+    title: "Resume Writing Best Practices",
+    category: "Career",
+    type: "document",
+    url: "#",
+    description: "Learn how to craft a resume that stands out to recruiters.",
+    tags: ["resume", "career", "tips"],
+  },
+  {
+    id: "3",
+    title: "System Design Fundamentals",
+    category: "Technical Skills",
+    type: "video",
+    url: "#",
+    description: "Understanding system design concepts for senior engineering roles.",
+    tags: ["system-design", "architecture", "engineering"],
+  },
+]
