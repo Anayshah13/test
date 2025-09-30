@@ -50,7 +50,7 @@ export default function SkillTestsPage() {
   return (
     <div className="container py-8">
       <h1 className="text-2xl font-bold mb-4">Skill Tests</h1>
-
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         {categories.map((c) => (
           <Card key={c.key} className={active === c.key ? "border-primary" : undefined}>
@@ -63,6 +63,8 @@ export default function SkillTestsPage() {
             </CardContent>
           </Card>
         ))}
+
+        {/* removed OA shortcut */}
       </div>
 
       {active && (
@@ -90,6 +92,8 @@ export default function SkillTestsPage() {
           )}
         </div>
       )}
+
+      {/* removed OA subsection */}
     </div>
   )
 }
