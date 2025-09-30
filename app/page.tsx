@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import VantaBackground from "./vanta"
 import {
   GraduationCap,
   Briefcase,
@@ -19,20 +20,24 @@ import {
 
 export default function HomePage() {
   return (
+    
     <div className="flex flex-col">
+      <div className="absolute inset-0 -z-10 w-full h-full">
+        <VantaBackground />
+      </div>
       {/* Hero Section */}
+      
       <section className="container flex flex-col items-center gap-8 py-20 md:py-32">
-        <Badge variant="secondary" className="gap-2 px-4 py-1.5">
-          <Sparkles className="h-3.5 w-3.5" />
-          AI-Powered Placement Platform
-        </Badge>
 
-        <h1 className="max-w-4xl text-center font-bold text-5xl leading-tight tracking-tight text-balance md:text-6xl lg:text-7xl">
-          Your Career Journey,{" "}
-          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Supercharged by AI
-          </span>
-        </h1>
+      <h1 className="max-w-4xl text-center font-bold leading-tight tracking-tight text-balance">
+        <span className="text-5xl md:text-6xl lg:text-7xl">PlaceBook</span>
+        <br />
+        <br />
+        <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent text-4xl md:text-5xl lg:text-6xl">
+          Placements Made Easier
+        </span>
+      </h1>
+
 
         <p className="max-w-2xl text-center text-muted-foreground text-xl leading-relaxed text-pretty">
           Connect students with dream opportunities and help recruiters find perfect candidates using intelligent
